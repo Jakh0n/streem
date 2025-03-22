@@ -1,3 +1,4 @@
+import { ThemeProvider } from '@/components/providers/theme-provider'
 import { ChildProps } from '@/types'
 import { Montserrat, Space_Grotesk } from 'next/font/google'
 import './globals.css'
@@ -15,11 +16,18 @@ const space_Grotesk = Space_Grotesk({
 
 export default function RootLayout({ children }: ChildProps) {
 	return (
-		<html lang='en'>
+		<html lang='en' suppressHydrationWarning>
 			<body
 				className={`${montserrat.variable} ${space_Grotesk.variable} antialiased`}
 			>
-				{children}
+				<ThemeProvider
+					attribute='class'
+					defaultTheme='system'
+					enableSystem
+					disableTransitionOnChange
+				>
+					{children}
+				</ThemeProvider>
 			</body>
 		</html>
 	)
