@@ -1,3 +1,4 @@
+import ClerkProvider from '@/components/providers/clerk-provider'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import { ChildProps } from '@/types'
 import { Montserrat, Space_Grotesk } from 'next/font/google'
@@ -26,7 +27,7 @@ export default function RootLayout({ children }: ChildProps) {
 					enableSystem
 					disableTransitionOnChange
 				>
-					{children}
+					<ClerkProvider>{children}</ClerkProvider>
 				</ThemeProvider>
 			</body>
 		</html>
