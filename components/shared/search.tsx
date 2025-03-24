@@ -38,7 +38,7 @@ const Search = () => {
 			/>
 			{term && (
 				<X
-					className='absolute right-10 size-4 text-muted-foregroun '
+					className='absolute right-10 size-4 text-muted-foreground cursor-pointer'
 					onClick={() => setTerm('')}
 				/>
 			)}

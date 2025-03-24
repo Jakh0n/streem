@@ -1,10 +1,6 @@
-import {
-	SignedIn,
-	SignedOut,
-	SignInButton,
-	SignUpButton,
-	UserButton,
-} from '@clerk/nextjs'
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+import { LogIn } from 'lucide-react'
+import { Button } from '../ui/button'
 import { SidebarTrigger } from '../ui/sidebar'
 import ModeToggle from './mode-toggle'
 const Actions = () => {
@@ -13,8 +9,12 @@ const Actions = () => {
 			<ModeToggle />
 			<SidebarTrigger />
 			<SignedOut>
-				<SignInButton />
-				<SignUpButton />
+				<SignInButton mode='modal'>
+					<Button variant='secondary' size='sm' className='rounded-full'>
+						<span className='hidden md:block'>Sign in</span>
+						<LogIn className='size-4' />
+					</Button>
+				</SignInButton>
 			</SignedOut>
 			<SignedIn>
 				<UserButton />
