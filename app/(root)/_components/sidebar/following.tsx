@@ -20,7 +20,7 @@ const Following = async () => {
 			<SidebarGroupLabel>Followed By</SidebarGroupLabel>
 			<SidebarGroupContent>
 				<SidebarMenu>
-					{following &&
+					{following.length > 0 ? (
 						following.map(item => (
 							<SidebarMenuItem key={item.label}>
 								<SidebarMenuButton asChild>
@@ -42,7 +42,12 @@ const Following = async () => {
 									</Link>
 								</SidebarMenuButton>
 							</SidebarMenuItem>
-						))}
+						))
+					) : (
+						<div className='flex items-center justify-center h-full'>
+							<p className='text-sm text-muted-foreground'>No followings</p>
+						</div>
+					)}
 				</SidebarMenu>
 			</SidebarGroupContent>
 		</SidebarGroup>

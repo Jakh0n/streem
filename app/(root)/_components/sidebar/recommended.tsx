@@ -20,7 +20,7 @@ const Recommended = async () => {
 			<SidebarGroupLabel>Recommended</SidebarGroupLabel>
 			<SidebarGroupContent>
 				<SidebarMenu>
-					{recommended &&
+					{recommended.length > 0 ? (
 						recommended.map(item => (
 							<SidebarMenuItem key={item.label}>
 								<SidebarMenuButton asChild>
@@ -42,7 +42,12 @@ const Recommended = async () => {
 									</Link>
 								</SidebarMenuButton>
 							</SidebarMenuItem>
-						))}
+						))
+					) : (
+						<div className='flex items-center justify-center h-full'>
+							<p className='text-sm text-muted-foreground'>No recommended</p>
+						</div>
+					)}
 				</SidebarMenu>
 			</SidebarGroupContent>
 		</SidebarGroup>
