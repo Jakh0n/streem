@@ -5,9 +5,11 @@ export interface ChildProps {
 }
 
 export interface User {
+	id: string
 	label: string
 	avatar: string
 	followedBy: number
+	fullName: string
 }
 
 export interface FollowingResponse {
