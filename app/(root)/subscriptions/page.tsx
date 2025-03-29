@@ -17,14 +17,14 @@ const Subscriptions = async () => {
 			<h1 className='text-2xl font-space_grotesk font-bold mb-2'>Users</h1>
 			<div className='w-full overflow-x-scroll flex items-center space-x-4 custom-scrollbar'>
 				{subscriptions?.map(subscription => (
-					<Link key={subscription.id} href={`/u/${subscription.label}`}>
+					<Link key={subscription.id} href={`/u/${subscription.username}`}>
 						<UserAvatar
-							username={subscription.label}
+							username={subscription.username}
 							avatar={subscription.avatar}
 							size={'xl'}
 						/>
 						<p className='text-center font-space_grotesk font-semibold capitalize'>
-							{subscription.label}
+							{subscription.username}
 						</p>
 					</Link>
 				))}

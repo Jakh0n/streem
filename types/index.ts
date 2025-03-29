@@ -6,12 +6,19 @@ export interface ChildProps {
 
 export interface User {
 	id: string
-	label: string
+	username: string
 	avatar: string
 	followedBy: number
 	fullName: string
 }
 
+export interface Feed {
+	id: string
+	thumbnail: string
+	createdAt: Date
+	title: string
+	user: User[]
+}
 export interface FollowingResponse {
 	following: User[]
 }

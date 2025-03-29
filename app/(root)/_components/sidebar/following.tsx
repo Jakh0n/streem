@@ -22,18 +22,18 @@ const Following = async () => {
 				<SidebarMenu>
 					{following.length > 0 ? (
 						following.map(item => (
-							<SidebarMenuItem key={item.label}>
+							<SidebarMenuItem key={item.username}>
 								<SidebarMenuButton asChild>
-									<Link href={`u/${item.label}`}>
+									<Link href={`/u/${item.username}`}>
 										<Image
 											src={item.avatar}
-											alt={item.label}
+											alt={item.username}
 											width={32}
 											height={32}
 											className='rounded-full'
 										/>
 										<div className='flex flex-col'>
-											<p className='text-sm font-medium'>{item.label}</p>
+											<p className='text-sm font-medium'>{item.username}</p>
 											<p className='text-sm text-muted-foreground'>
 												{item.followedBy} follower
 												{item.followedBy !== 1 && 's'}

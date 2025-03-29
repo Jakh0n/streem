@@ -9,10 +9,10 @@ const LivesPage = async () => {
 	return (
 		<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4'>
 			{lives?.map(live => (
-				<Link key={live.label} href={`/lives/${live.label}`}>
+				<Link key={live.username} href={`/lives/${live.username}`}>
 					<div className='w-full h-56 flex items-center justify-center bg-secondary rounded-lg flex-col '>
 						<UserAvatar
-							username={live.label}
+							username={live.username}
 							avatar={live.avatar}
 							isLive
 							showBadge
@@ -20,7 +20,7 @@ const LivesPage = async () => {
 						/>
 						<div>
 							<h1 className='font-space_grotesk text-lg mt-4 text-center'>
-								<span className='capitalize'>{live.label}</span> is live
+								<span className='capitalize'>{live.username}</span> is live
 							</h1>
 							<p className='line-clamp-2 text-sm text-center text-muted-foreground leading-4'>
 								Lorem ipsum dolor sit, amet consectetur adipisicing elit.
