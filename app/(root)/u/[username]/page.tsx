@@ -3,8 +3,9 @@ import UserAvatar from '@/components/shared/user-avatar'
 import { Button } from '@/components/ui/button'
 import { currentUser } from '@clerk/nextjs/server'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import SubscribeBtn from '../../_components/subscribe-btn'
-import UserContent from '../_components/user-content'
+import UserContent, { UserContentSkeleton } from '../_components/user-content'
 
 interface UsernamePageProps {
 	params: Promise<{ username: string }>
@@ -91,8 +92,9 @@ const UserNamePage = async ({ params }: UsernamePageProps) => {
 					</div>
 				</div>
 			</div>
-
-			<UserContent />
+			<Suspense fallback={<UserContentSkeleton />}>
+				<UserContent />
+			</Suspense>
 		</>
 	)
 }
