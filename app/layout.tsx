@@ -1,5 +1,6 @@
 import ClerkProvider from '@/components/providers/clerk-provider'
 import { ThemeProvider } from '@/components/providers/theme-provider'
+import { Toaster } from '@/components/ui/toaster'
 import { ChildProps } from '@/types'
 import { Montserrat, Space_Grotesk } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: ChildProps) {
 					disableTransitionOnChange
 				>
 					<ClerkProvider>
+						<Toaster />
 						<NextTopLoader showSpinner={false} />
 						{children}
 					</ClerkProvider>
