@@ -40,7 +40,7 @@ const VideoActions = ({ reaction }: VideoActionsProps) => {
 					variant={'secondary'}
 				>
 					<ThumbsUp className={cn(reaction === 'LIKE' && 'fill-foreground')} />
-					<span className='text-sm'>
+					<span className='text-md'>
 						{reaction === 'LIKE' ? 'Liked' : 'Like'}
 					</span>
 				</Button>
