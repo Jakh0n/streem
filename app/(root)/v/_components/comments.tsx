@@ -1,5 +1,6 @@
 import { getComments } from '@/actions/video.action'
 import UserAvatar from '@/components/shared/user-avatar'
+import { Separator } from '@/components/ui/separator'
 import PostComment from './post-comment'
 
 const Comments = async () => {
@@ -9,6 +10,7 @@ const Comments = async () => {
 		<div className='pb-8'>
 			<h1 className='text-md font-semibold leading-none mb-4'>Comments</h1>
 			<PostComment />
+			<Separator className='my-4' />
 			<div className='flex items-start flex-col space-y-3 mt-4'>
 				{comments &&
 					comments.map(comment => (

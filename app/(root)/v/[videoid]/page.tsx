@@ -1,6 +1,6 @@
-import { Separator } from '@/components/ui/separator'
 import Comments from '../_components/comments'
 import Description from '../_components/description'
+import RecommendedVideos from '../_components/recommended-video'
 import UserInformation from '../_components/user-information'
 import VideoActions from '../_components/vide-actions'
 
@@ -24,8 +24,11 @@ const VideoPage = async ({ params }: VideoPageProps) => {
 					<VideoActions reaction='LIKE' />
 				</div>
 				<Description />
-				<Separator className='my-4' />
+
 				<Comments />
+			</div>
+			<div className='col-span-1'>
+				<RecommendedVideos />
 			</div>
 		</div>
 	)
