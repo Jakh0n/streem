@@ -1,3 +1,4 @@
+import Description from '../_components/description'
 import UserInformation from '../_components/user-information'
 import VideoActions from '../_components/vide-actions'
 
@@ -18,9 +19,9 @@ const VideoPage = async ({ params }: VideoPageProps) => {
 				</h1>
 				<div className='flex items-center justify-between'>
 					<UserInformation />
-
 					<VideoActions reaction='LIKE' />
 				</div>
+				<Description />
 			</div>
 		</div>
 	)
