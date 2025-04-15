@@ -25,6 +25,8 @@ const HomePage = async () => {
 							<UserAvatar
 								username={feed.user.username}
 								avatar={feed.user.avatar}
+								size='lg'
+								variant='default'
 							/>
 
 							<div className='flex flex-col space-y-0'>

@@ -14,7 +14,7 @@ const UserInformation = () => {
 			/>
 
 			<div className='flex flex-col space-y-0'>
-				<div className='flex itemsce gap-x-1'>
+				<div className='flex items-center gap-x-1'>
 					<h2 className='font-bold text-lg font-space_grotesk'>
 						Jakhon Yokubov
 					</h2>
