@@ -4,7 +4,7 @@ import UserAvatar from '@/components/shared/user-avatar'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useUser } from '@clerk/nextjs'
-import { SendIcon } from 'lucide-react'
+import { Send } from 'lucide-react'
 
 const PostComment = () => {
 	const user = useUser()
@@ -14,15 +14,15 @@ const PostComment = () => {
 				username={user.user?.username || ''}
 				avatar={user.user?.imageUrl || ''}
 			/>
-			<div className='flex-1 flex items-center '>
+			<form className='flex flex-1'>
 				<Input
-					placeholder='Add a comment...'
-					className='rounded-md rounded-r-none focus-visible:ring-0 '
+					className='rounded-r-none w-full bg-secondary border-r border-r-secondary-foreground/50 focus-visible:ring-0 font-space_grotesk h-10'
+					placeholder='Add a public comment...'
 				/>
-				<Button size='icon' className='rounded-l-none'>
-					<SendIcon className='w-4 h-4' />
+				<Button className='rounded-l-none border-none h-10' size={'icon'}>
+					<Send />
 				</Button>
-			</div>
+			</form>
 		</div>
 	)
 }
