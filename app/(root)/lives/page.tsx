@@ -9,7 +9,7 @@ const LivesPage = async () => {
 	return (
 		<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4'>
 			{lives?.map(live => (
-				<Link key={live.username} href={`/lives/${live.username}`}>
+				<Link key={live.username} href={`/s/${live.username}`}>
 					<div className='w-full h-56 flex items-center justify-center bg-secondary rounded-lg flex-col '>
 						<UserAvatar
 							username={live.username}
